@@ -26,11 +26,13 @@
 
 <tr>
 <% Director.all.each do |director|%>
-<th><%= director.id %></th>
-<th><img src="<%= director.image %>" alt="picture of <%= director.name %>%>"></th>
-<th><%= director.name %></th>
-<th><%= director.dob %></th>
-<th><a href="directors/<%= director.id %>">Show details</a></th>
+<td><%= director.id %></td>
+<td><img src="<%= director.image %>" alt="picture of <%= director.name %>%>" style="width:250px;"></td>
+<td><%= director.name %></td>
+<td><%= director.dob %></td>
+<td>
+<a href="/directors/<%= director.id %>"> Show details </a>
+</td>
 </tr>
 <%end%>
 </table>

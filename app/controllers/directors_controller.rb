@@ -17,7 +17,7 @@ class DirectorsController < ApplicationController
   end
 
   def eldest_director
-    @eldest =  Director.order(:dob)[0]
+    @eldest =  Director.order(:dob).where.not(:dob => nil)[0]
     render({:template => "director_page/the_eldest_director"})
 
   end
